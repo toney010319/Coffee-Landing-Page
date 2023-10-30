@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/923050ed77.js" crossorigin="anonymous"></script>
+  <title>Coffee Landing Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("a").on('click', function (event) {
+
+
+        if (this.hash !== "") {
+
+          event.preventDefault();
+
+
+          var hash = this.hash;
+
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <!---header-->
+    <div id="header">
+      <!--1-->
+      <nav id="nav-bar">
+        <!--3-->
+        <div class="logo-container">
+          <img id="header-img" src="images/logo.png">
+          <p class="brand-name">Toney's Café</p> </img>
+          <!--2-->
+        </div>
+        <ul>
+          <!--4&5-->
+          <li class="nav-link"><a href="#home">Home</a></li>
+          <!--4&5-->
+          <li class="nav-link"><a href="#menu">Coffee Menu</a></li>
+          <!--4&5-->
+          <li class="nav-link"><a href="#about-us">About Us</a></li>
+          <!--4&5-->
+          <li class="nav-link"><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <!--HOME TAB-->
+    <div class="home" id="home">
+      <div class="home-text">
+        <h4>Coffee is <br>MY &#x2764; LANGUAGE</h4>
+        <form id="form">
+          <!--7-->
+          <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+          <!--8 ,9 & 10-->
+          <div class="submit"> <input type="submit" name="submit" value="Lets Talk"></div>
+          <!--11 & 12-->
+        </form>
+        <ul class="icon-template">
+          <li><img class="icon" src="images/coffee-beans .png" /></li>
+          <li><img class="icon" src="images/coffee-machine.png" /></li>
+          <li><img class="icon" src="images/latte.png" /></li>
+          <li><img class="icon" src="images/coffee-cup.png" /></li>
+        </ul>
+
+      </div>
+      <div id="video"><video src="images/video.mp4" autoplay muted loop></div>
+      <!--6-->
+    </div>
+    <!--MENU TAB-->
+    <h4 class="title">MENU</h4>
+    <div class="menu" id="menu">
+      <div class="card">
+        <img src="images/menu 1.png" />
+        <div class="frame">
+          <h4>Americano</h4>
+          <p>100% Natural Arabica 30ml cup</p>
+          <p class="icon-frame"><i class="fa-solid fa-cart-shopping fa-xl"></i><i class="fa-regular fa-heart fa-xl"></i>
+          </p>
+        </div>
+        <button class="btn">$2.90</button>
+      </div>
+      <div class="card">
+        <img src="images/menu 2.png" />
+        <div class="frame">
+          <h4>Capuccino</h4>
+          <p>Coffee 50%, Milk 50% 200ml</p>
+          <p class="icon-frame"><i class="fa-solid fa-cart-shopping fa-xl"></i><i class="fa-regular fa-heart fa-xl"></i>
+          </p>
+        </div>
+        <button class="btn">$2.90</button>
+      </div>
+      <div class="card">
+        <img src="images/menu 3.png" />
+        <div class="frame">
+          <h4>Ice Frappe</h4>
+          <p>Espressp 50%, Milk 25%, Chocolate 25% 250ml</p>
+          <p class="icon-frame"><i class="fa-solid fa-cart-shopping fa-xl"></i><i class="fa-regular fa-heart fa-xl"></i>
+          </p>
+        </div>
+        <button class="btn">$2.90</button>
+      </div>
+      <div class="card">
+        <img src="images/menu 4.png" />
+        <div class="frame">
+          <h4>Caffé Latte</h4>
+          <p>Espresso 25%, Steam Milk 25%, Milk Foam 10%, Chocolate Sprinkles 15% 250ml</p>
+          <p class="icon-frame"><i class="fa-solid fa-cart-shopping fa-xl"></i><i class="fa-regular fa-heart fa-xl"></i>
+          </p>
+        </div>
+        <button class="btn">$2.90</button>
+      </div>
+    </div>
+    <!--Contact Us Tab-->
+    <div class="contact" id="contact">
+      <h2>Want to Reserve a Table?</h2>
+      <p><span>Lets Talk,</span> you may reach us through the following</p>
+      <div class="contacts">
+        <div class="contact-list">
+          <div> <button class="contact-btn"><img src="images/telephone.png" /></button>
+            <p> +6399-999-9999</p>
+          </div>
+          <div> <button class="contact-btn"><a href="https://goo.gl/maps/tnT5r4cqEBomSTd79" target="_blank"><img
+                  src="images/location.png" /></a></button>
+            <p> Antonio Villegas St, Ermita 1000 Manila, Philippines</p>
+          </div>
+          <div> <button class="contact-btn"><a href="https://www/gmail.com/" target="_blank"><img
+                  src="images/gmail.png" /></a></button>
+            <p> toney`scaffee@gmail.com</p>
+          </div>
+        </div>
+        <div class="social-media">
+
+          <div><button class="contact-btn"><a href="https://www.facebook.com/" target="_blank"><img
+                  src="images/facebook.png" /></a></button>
+            <p> www.facebook.com</p>
+          </div>
+          <div> <button class="contact-btn"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2F"
+                target="_blank"><img src="images/twitter.png" /></a></button>
+            <p> www.twitter.com</p>
+          </div>
+          <div> <button class="contact-btn"><a href="https://www.instagram.com/" target="_blank"><img
+                  src="images/instagram.png" /></a></button>
+            <p> www.instagram.com</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p>Benefits of reserving a table include guaranteed seating, convenience, space for groups, enhanced productivity,
+        personalized service, and avoiding disappointment during busy times.</p>
+    </div>
+    <!--About us-->
+    <div class="about-us" id="about-us">
+      <div class="logo-container">
+        <img id="header-img" src="images/logo.png">
+        <p class="brand-name">Toney's Café</p>
+      </div>
+      <div class="services">
+        <div class="Our-Service">
+          <h4>Our Service</h4>
+          <ul>
+            <li>Pricing</li>
+            <li>Tracking</li>
+            <li>Report a Bug</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
+        <div class="Our-Service">
+          <h4>Our Company</h4>
+          <ul>
+            <li>Pricing</li>
+            <li>Tracking</li>
+            <li>Report a Bug</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
+        <div class="Our-Service">
+          <h4>Address</h4>
+          <ul>
+            <li>Pricing</li>
+            <li>Tracking</li>
+            <li>Report a Bug</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
